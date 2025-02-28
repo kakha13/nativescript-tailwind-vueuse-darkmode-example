@@ -1,23 +1,47 @@
-# Tailwind Dark Mode Issue
+# Nativescript Tailwind 4 Dark Mode Switch With @nativescript-use example
 
-## Problem Description
+## Project Overview
 
-This repository demonstrates an issue with Tailwind CSS dark mode where applying dark mode classes to one element unexpectedly affects other elements.
+This repository demonstrates the integration of Tailwind CSS 4 with NativeScript, featuring a dynamic dark mode implementation using the @nativescript-use utility library. The project showcases how to build cross-platform mobile applications with modern, utility-first CSS styling while supporting theme switching capabilities.
 
-### Issue Details
+## Features
 
-1. **Dark Mode Not Working Correctly**: The dark mode toggle functionality is not properly applying dark mode styles as expected.
+- **Tailwind CSS 4 Integration**: Utilizes the latest version of Tailwind CSS for styling NativeScript components
+- **Dynamic Dark Mode**: Implements a theme switching mechanism between light and dark modes
+- **@nativescript-use Library**: Leverages the Vue Composition API-inspired utilities for NativeScript
+- **Cross-Platform Support**: Works on both iOS and Android platforms
 
-2. **CSS Class Leakage**: When applying a dark mode class like `dark:text-red-400` to a button, the style unexpectedly affects other elements on the page that shouldn't inherit this styling.
+## Setup Instructions
 
-## Reproduction Steps
+1. Clone this repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Run the application:
+   ```
+   ns run android
+   ```
+   or
+   ```
+   ns run ios
+   ```
 
-1. Toggle dark mode on the page
-2. Observe that elements with specific dark mode classes affect unrelated elements
-3. For example, a button with `dark:text-red-400` causes text color changes in other components
+## Dark Mode Implementation
 
-## Environment
+The project demonstrates how to:
+- Configure Tailwind CSS for dark mode support
+- Use the `dark:` variant prefix to apply dark mode specific styles
+- Implement a theme toggle using reactive state management
+- Persist user theme preferences
 
-- Tailwind CSS version: 4.0.9
-- Operating System: Windows
+## Issues Fixed
 
+- When applying dark mode classes (like `dark:text-red-400`) to certain elements, styles may unexpectedly affect other elements
+- Some theme transitions might not be smooth on specific devices
+
+## Resources
+
+- [NativeScript Documentation](https://docs.nativescript.org/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [@nativescript-use GitHub](https://github.com/NativeScript-Use/NativeScript-Use)
