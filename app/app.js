@@ -1,7 +1,7 @@
-import Vue from 'nativescript-vue'
+import { createApp } from 'nativescript-vue'
 
 import Home from './components/Home'
 
-new Vue({
-  render: (h) => h('frame', [h(Home)]),
-}).$start()
+const app = createApp(Home);
+
+app.start();
